@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cadastro — Fila PS5</title>
+<style>
+body{margin:0;background:#0b1020;color:#e9f1ff;font-family:system-ui}
+.box{max-width:520px;margin:40px auto;background:#11183a;border:1px solid #1e2a5a;border-radius:14px;padding:22px}
+label{display:block;margin:12px 0 6px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #31407a;background:#0f1433;color:#e9f1ff}
+button{margin-top:16px;padding:12px 16px;border-radius:10px;border:0;background:#00d4ff;color:#00111a;font-weight:700;cursor:pointer}
+small{opacity:.8}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Entre na fila do PS5</h2>
+<label>Seu nome</label>
+<input id="name" placeholder="Ex.: Micael" />
+<label>WhatsApp (com DDI)</label>
+<input id="phone" placeholder="Ex.: +55DDDSEUNUMERO" />
+<small>Usaremos somente para avisar quando chegar sua vez.</small>
+<button id="join">Entrar na fila</button>
+<div id="msg"></div>
+</div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fila PS5 — Totem</title>
+  <style>
+    body{margin:0;background:#0b1020;color:#e9f1ff;font-family:system-ui,Segoe UI,Roboto,Ubuntu,Arial}
+    .wrap{display:grid;place-items:center;min-height:100vh;gap:24px}
+    .card{background:#11183a;border:1px solid #1e2a5a;border-radius:20px;padding:24px 28px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px;font-size:32px}
+    .big{font-size:56px;font-weight:800;letter-spacing:1px}
+    .row{display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:center}
+    #qrcode{background:#fff;padding:12px;border-radius:12px}
+    .pill{background:#0bd3ff22;border:1px solid #0bd3ff55;padding:8px 14px;border-radius:999px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>Agende sua vez no PS5</h1>
+    <div class="row">
+      <div id="qrcode"></div>
+      <div>
+        <div class="pill">Escaneie o QR para entrar na fila</div>
+        <div id="current" class="big">Chamando: —</div>
+        <div id="next">Próximo: —</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
