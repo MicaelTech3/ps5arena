@@ -1,25 +1,19 @@
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Admin — Fila PS5</title>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admin — PS5</title>
 <style>
 body{margin:0;background:#0b1020;color:#e9f1ff;font-family:system-ui}
-.row{display:flex;gap:12px;padding:16px}
-button{padding:12px 16px;border-radius:10px;border:0;background:#00d4ff;color:#00111a;font-weight:800;cursor:pointer}
-table{width:100%;border-collapse:collapse}
-td,th{border-bottom:1px solid #22306a;padding:10px}
-</style>
-</head>
-<body>
-<div class="row">
-<button id="callNext">Chamar próximo</button>
-<button id="finish">Finalizar sessão atual</button>
+.grid{display:grid;grid-template-columns:repeat(2,minmax(320px,1fr));gap:16px;padding:16px}
+.card{background:#11183a;border:1px solid #1e2a5a;border-radius:14px;padding:16px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+button{padding:8px 12px;border-radius:10px;border:0;background:#00d4ff;color:#00111a;font-weight:700;cursor:pointer}
+.badge{background:#0bd3ff22;border:1px solid #0bd3ff55;padding:4px 10px;border-radius:999px}
+.count{font-size:28px;font-weight:800}
+.small{opacity:.9}
+</style></head><body>
+<div class="controls" style="padding:16px">
+  <span class="badge">Tempo global (min):</span>
+  <input id="dur" type="number" value="17" min="1" max="60" style="width:80px;padding:8px;border-radius:8px;border:1px solid #31407a;background:#0f1433;color:#e9f1ff"/>
+  <button id="setDur">Aplicar a todas</button>
 </div>
-<table>
-<thead><tr><th>#</th><th>Nome</th><th>Telefone</th><th>Status</th></tr></thead>
-<tbody id="tbody"></tbody>
-</table>
+<div class="grid" id="grid"></div>
 <script type="module" src="/app.js"></script>
-</body>
-</html>
+</body></html>
